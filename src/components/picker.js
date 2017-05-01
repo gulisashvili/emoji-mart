@@ -7,6 +7,15 @@ import store from '../utils/store'
 import frequently from '../utils/frequently'
 import { deepMerge } from '../utils'
 
+
+var Scroll  = require('react-scroll');
+
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scrolll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
+
 import { Anchors, Category, Emoji, Preview, Search } from '.'
 
 const RECENT_CATEGORY = { name: 'Recent', emojis: null }
@@ -249,6 +258,20 @@ export default class Picker extends React.Component {
         { scroll, anchors } = this.refs,
         scrollToComponent = null
 
+    const recents = 0
+    const peoples = 170.375
+    const nature = 1026.375
+    const food = 1666.375
+    // const recents = 0
+    // const recents = 0
+    // const recents = 0
+    // const recents = 0
+    // const recents = 0
+    
+    
+
+        console.log("cattt ,", category)
+
     scrollToComponent = () => {
       if (component) {
         let { top } = component
@@ -259,11 +282,29 @@ export default class Picker extends React.Component {
           top += 1
         }
 
-        scroll.scrollTop = top
+
+        // switch(category.name) {
+        //   case 'People': 
+        //     top = recents
+        //   case 'Nature': 
+        //     top = nature
+        //   case 'Food': 
+        //     top = food
+        // }
+
+        // // console.log("TTTOOPP ", top)
+        
+
+        // scroll.scrollTop = top
+        scrolll.scrollMore(top, {
+          duration: 300
+        });
+
       }
     }
 
     if (SEARCH_CATEGORY.emojis) {
+      console.log("MMMMMM")
       this.handleSearch(null)
       this.refs.search.clear()
 

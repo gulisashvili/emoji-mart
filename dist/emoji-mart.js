@@ -1746,6 +1746,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var anchors = _refs.anchors;
 	      var scrollToComponent = null;
 
+	      var recents = 0;
+	      var peoples = 170.375;
+	      var nature = 1026.375;
+	      var food = 1666.375;
+	      // const recents = 0
+	      // const recents = 0
+	      // const recents = 0
+	      // const recents = 0
+	      // const recents = 0
+
+
+	      console.log("cattt ,", category);
+
 	      scrollToComponent = function scrollToComponent() {
 	        if (component) {
 	          var top = component.top;
@@ -1757,11 +1770,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	            top += 1;
 	          }
 
+	          switch (category.name) {
+	            case 'People':
+	              top = recents;
+	            case 'Nature':
+	              top = nature;
+	            case 'Food':
+	              top = food;
+	          }
+
+	          // console.log("TTTOOPP ", top)
+
+
 	          scroll.scrollTop = top;
 	        }
 	      };
 
 	      if (SEARCH_CATEGORY.emojis) {
+	        console.log("MMMMMM");
 	        this.handleSearch(null);
 	        this.refs.search.clear();
 
