@@ -292,6 +292,8 @@ export default class Picker extends React.Component {
   }
 
   render() {
+
+    console.log("testing working")
     var { perLine, emojiSize, set, sheetSize, style, title, emoji, color, native, backgroundImageFn, emojisToShowFilter, include, exclude, autoFocus } = this.props,
         { skin } = this.state,
         width = (perLine * (emojiSize + 12)) + 12 + 2
