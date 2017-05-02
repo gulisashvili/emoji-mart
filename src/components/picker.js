@@ -292,7 +292,7 @@ export default class Picker extends React.Component {
         //     top = food
         // }
 
-        // // console.log("TTTOOPP ", top)
+        console.log("TTTOOPP ", top)
         
 
         // scroll.scrollTop = top
