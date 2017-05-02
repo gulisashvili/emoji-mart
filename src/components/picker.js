@@ -311,7 +311,7 @@ export default class Picker extends React.Component {
         
 
         // scroll.scrollTop = top
-        scrolll.scrollMore(top, {
+        scrolll.scrollTo(top, {
           duration: 300
         });
 

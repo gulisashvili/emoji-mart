@@ -1805,7 +1805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          console.log("TTTOOPP ", top);
 
 	          // scroll.scrollTop = top
-	          scrolll.scrollMore(top, {
+	          scrolll.scrollTo(top, {
 	            duration: 300
 	          });
 	        }
