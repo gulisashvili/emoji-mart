@@ -258,19 +258,7 @@ export default class Picker extends React.Component {
         { scroll, anchors } = this.refs,
         scrollToComponent = null
 
-    const recents = 0
-    const peoples = 170.375
-    const nature = 1026.375
-    const food = 1666.375
-    // const recents = 0
-    // const recents = 0
-    // const recents = 0
-    // const recents = 0
-    // const recents = 0
-    
-    
-
-        console.log("cattt ,", category)
+    console.log("cattt ,", category)
 
     scrollToComponent = () => {
       if (component) {
@@ -281,16 +269,6 @@ export default class Picker extends React.Component {
         } else {
           top += 1
         }
-
-
-        // switch(category.name) {
-        //   case 'People': 
-        //     top = recents
-        //   case 'Nature': 
-        //     top = nature
-        //   case 'Food': 
-        //     top = food
-        // }
 
         console.log("TTTOOPP ", top)
         
