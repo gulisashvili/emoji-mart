@@ -126,9 +126,11 @@ export default class Category extends React.Component {
 
     return <div ref='container'  className={`emoji-mart-category ${name} ${emojis && !emojis.length ? 'emoji-mart-no-results' : ''}`} style={containerStyles}>
       <Element name={name}>
-      <div style={labelStyles} data-name={name} className='emoji-mart-category-label'>
-        <span style={labelSpanStyles} ref='label'>{i18n.categories[name.toLowerCase()]}</span>
-      </div>
+        <div style={labelStyles} data-name={name} className='emoji-mart-category-label'>
+          <span style={labelSpanStyles} ref='label'>{i18n.categories[name.toLowerCase()]}</span>
+        </div>
+      </Element>
+      
 
       {emojis && emojis.map((emoji) =>
         <Emoji
@@ -156,7 +158,6 @@ export default class Category extends React.Component {
           </div>
         </div>
       }
-      </Element>
     </div>
   }
 }

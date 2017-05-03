@@ -22918,32 +22918,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	              { style: labelSpanStyles, ref: 'label' },
 	              i18n.categories[name.toLowerCase()]
 	            )
-	          ),
-	          emojis && emojis.map(function (emoji) {
-	            return _react2.default.createElement(_.Emoji, _extends({
-	              key: emoji.id || emoji,
-	              emoji: emoji
-	            }, emojiProps));
-	          }),
-	          emojis && !emojis.length && _react2.default.createElement(
+	          )
+	        ),
+	        emojis && emojis.map(function (emoji) {
+	          return _react2.default.createElement(_.Emoji, _extends({
+	            key: emoji.id || emoji,
+	            emoji: emoji
+	          }, emojiProps));
+	        }),
+	        emojis && !emojis.length && _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement(
-	              'div',
-	              null,
-	              _react2.default.createElement(_.Emoji, _extends({}, emojiProps, {
-	                size: 38,
-	                emoji: 'sleuth_or_spy',
-	                onOver: null,
-	                onLeave: null,
-	                onClick: null
-	              }))
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'emoji-mart-no-results-label' },
-	              i18n.notfound
-	            )
+	            _react2.default.createElement(_.Emoji, _extends({}, emojiProps, {
+	              size: 38,
+	              emoji: 'sleuth_or_spy',
+	              onOver: null,
+	              onLeave: null,
+	              onClick: null
+	            }))
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'emoji-mart-no-results-label' },
+	            i18n.notfound
 	          )
 	        )
 	      );
@@ -23856,42 +23856,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	          console.log(window.innerWidth);
 	          console.log("YOOOOOOO");
 
-	          if (category.name == 'Recent') {
-	            console.log('A');
-	            scrolll.scrollTo(0);
-	          } else if (category.name == 'People') {
-	            if (window.innerWidth < 816) {
-	              console.log("mobile");
+	          scroller.scrollTo(category.name, {
+	            duration: 300,
+	            smooth: true
+	          });
 
-	              scroller.scrollTo(category.name, {
-	                duration: 300,
-	                smooth: true,
-	                offset: -400
-	              });
-	            } else {
-	              scroller.scrollTo(category.name, {
-	                duration: 300,
-	                smooth: true,
-	                offset: -360
-	              });
-	            }
-	          } else {
-	            console.log('B');
-	            if (window.innerWidth < 816) {
-	              console.log("mobile");
-	              scroller.scrollTo(category.name, {
-	                duration: 300,
-	                smooth: true,
-	                offset: -330
-	              });
-	            } else {
-	              scroller.scrollTo(category.name, {
-	                duration: 300,
-	                smooth: true,
-	                offset: -330
-	              });
-	            }
-	          }
+	          // if ( category.name == 'Recent') {
+	          //   console.log('A')
+	          //   scrolll.scrollTo(0)
+	          // } else if (category.name == 'People') {
+	          //     if (window.innerWidth < 816) {
+	          //     console.log("mobile")
+
+	          //       scroller.scrollTo(category.name, {
+	          //         duration: 300,
+	          //         smooth: true,
+	          //         offset: -400
+	          //       })
+	          //     } else {
+	          //        scroller.scrollTo(category.name, {
+	          //         duration: 300,
+	          //         smooth: true,
+	          //         offset: -360
+	          //       })
+	          //     }
+	          // } else {
+	          //   console.log('B')
+	          //   if (window.innerWidth < 816) {
+	          //     console.log("mobile")
+	          //     scroller.scrollTo(category.name, {
+	          //       duration: 300,
+	          //       smooth: true,
+	          //       offset: -330
+	          //     })
+	          //   } else {
+	          //       scroller.scrollTo(category.name, {
+	          //         duration: 300,
+	          //         smooth: true,
+	          //         offset: -330
+	          //       })
+	          //   }
+
+	          // }
+
 	        }
 	      };
 
