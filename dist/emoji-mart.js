@@ -23909,9 +23909,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          // });
 
 	          scroller.scrollTo(category.name, {
-	            duration: 1500,
+	            duration: 300,
 	            smooth: true,
-	            offset: -340
+	            offset: -310
 	          });
 
 	          // scrolll.scrollMore(-300, {
