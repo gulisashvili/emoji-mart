@@ -284,7 +284,7 @@ export default class Picker extends React.Component {
         if ( category.name == 'Recent') {
           scrolll.scrollTo(0)
         } else {
-          if (window.innderWidth < 816) {
+          if (window.innerWidth < 816) {
             scroller.scrollTo(category.name, {
               duration: 300,
               smooth: true,
