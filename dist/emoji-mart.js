@@ -23864,7 +23864,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            scroller.scrollTo(category.name, {
 	              duration: 300,
 	              smooth: true,
-	              offset: -100
+	              offset: -300
 	            });
 	          }
 	        }
