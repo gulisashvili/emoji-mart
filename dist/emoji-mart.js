@@ -23872,11 +23872,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	          if (category.name == 'Recent') {
 	            scrolll.scrollTo(0);
 	          } else {
-	            scroller.scrollTo(category.name, {
-	              duration: 300,
-	              smooth: true,
-	              offset: -340
-	            });
+	            if (window.innderWidth < 816) {
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -450
+	              });
+	            } else {
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -340
+	              });
+	            }
 	          }
 	        }
 	      };
