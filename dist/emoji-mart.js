@@ -22905,11 +22905,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      return _react2.default.createElement(
-	        'div',
-	        { ref: 'container', className: 'emoji-mart-category ' + name + ' ' + (emojis && !emojis.length ? 'emoji-mart-no-results' : ''), style: containerStyles },
+	        Element,
+	        { name: name },
 	        _react2.default.createElement(
-	          Element,
-	          { name: name },
+	          'div',
+	          { ref: 'container', className: 'emoji-mart-category ' + name + ' ' + (emojis && !emojis.length ? 'emoji-mart-no-results' : ''), style: containerStyles },
 	          _react2.default.createElement(
 	            'div',
 	            { style: labelStyles, 'data-name': name, className: 'emoji-mart-category-label' },
