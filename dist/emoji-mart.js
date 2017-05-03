@@ -23849,79 +23849,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var anchors = _refs.anchors;
 	      var scrollToComponent = null;
 
-	      console.log('this refs ', this.refs);
-
-	      var people = 150;
-	      var nature = 530;
-	      var foods = 825;
-	      var activity = 1025;
-	      var places = 1175;
-	      var objects = 1425;
-	      var symbols = 1765;
-	      var flags = 2245;
-
-	      console.log("cattt ,", category);
-
 	      scrollToComponent = function scrollToComponent() {
 	        if (component) {
 	          var top = component.top;
 
 
-	          console.log("miomimim");
-
-	          switch (category.name) {
-	            case 'Recent':
-	              top = 0;
-	              break;
-	            case 'People':
-	              top = people;
-	              break;
-	            case 'Nature':
-	              top = nature;
-	              break;
-	            case 'Foods':
-	              top = foods;
-	              break;
-	            case 'Activity':
-	              top = activity;
-	              break;
-	            case 'Places':
-	              top = places;
-	              break;
-	            case 'Objects':
-	              top = objects;
-	              break;
-	            case 'Symbols':
-	              top = symbols;
-	              break;
-	            case 'Flags':
-	              top = flags;
-	              break;
-	              defaut: top = 0;
+	          if (category.name == 'Recent') {
+	            scroller.scrollTo(category.name, {
+	              duration: 300,
+	              smooth: true
+	            });
+	          } else {
+	            scroller.scrollTo(category.name, {
+	              duration: 300,
+	              smooth: true,
+	              offset: -340
+	            });
 	          }
-	          console.log("TTTOOPP ", top);
-
-	          // scroll.scrollTop = top
-
-
-	          // scroller.scroller(component, {
-	          //   duration: 300
-	          // });
-
-	          scroller.scrollTo(category.name, {
-	            duration: 300,
-	            smooth: true,
-	            offset: -310
-	          });
-
-	          // scrolll.scrollMore(-300, {
-	          //   duration: 300
-	          // });
 	        }
 	      };
 
 	      if (SEARCH_CATEGORY.emojis) {
-	        console.log("MMMMMM");
 	        this.handleSearch(null);
 	        this.refs.search.clear();
 

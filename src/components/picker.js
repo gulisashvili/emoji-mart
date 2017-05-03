@@ -261,82 +261,31 @@ export default class Picker extends React.Component {
         { scroll, anchors } = this.refs,
         scrollToComponent = null
 
-    console.log('this refs ', this.refs)
-
-    const people = 150
-    const nature = 530
-    const foods = 825
-    const activity = 1025
-    const places = 1175
-    const objects = 1425
-    const symbols = 1765
-    const flags = 2245
-    
-
-    console.log("cattt ,", category)
-
     scrollToComponent = () => {
       if (component) {
         let { top } = component
-        
-        console.log("miomimim")
 
-        switch (category.name) {
-          case 'Recent':
-            top = 0
-            break;   
-          case 'People':
-            top = people
-            break;
-          case 'Nature':
-            top = nature
-            break;
-          case 'Foods':
-            top = foods
-            break;
-          case 'Activity':
-            top = activity
-            break;
-          case 'Places':
-            top = places
-            break;
-          case 'Objects':
-            top = objects
-            break;
-          case 'Symbols':
-            top = symbols
-            break;
-          case 'Flags':
-            top = flags
-            break;        
-          defaut:
-            top = 0
+
+        if ( category.name == 'Recent') {
+          scroller.scrollTo(category.name, {
+            duration: 300,
+            smooth: true
+          })
+        } else {
+          scroller.scrollTo(category.name, {
+            duration: 300,
+            smooth: true,
+            offset: -340
+          })
         }
-        console.log("TTTOOPP ", top)
-        
+      
 
-        // scroll.scrollTop = top
-     
-
-        // scroller.scroller(component, {
-        //   duration: 300
-        // });
-
-        scroller.scrollTo(category.name, {
-          duration: 300,
-          smooth: true,
-          offset: -310
-        })
-
-        // scrolll.scrollMore(-300, {
-        //   duration: 300
-        // });
+    
 
       }
     }
 
     if (SEARCH_CATEGORY.emojis) {
-      console.log("MMMMMM")
       this.handleSearch(null)
       this.refs.search.clear()
 
