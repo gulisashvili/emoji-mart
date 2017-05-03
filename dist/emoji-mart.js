@@ -23853,25 +23853,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (component) {
 	          var top = component.top;
 
-
+	          console.log(window.innerWidth);
 	          console.log("YOOOOOOO");
 
 	          if (category.name == 'Recent') {
 	            console.log('A');
 	            scrolll.scrollTo(0);
 	          } else if (category.name == 'People') {
-	            scroller.scrollTo(category.name, {
-	              duration: 300,
-	              smooth: true,
-	              offset: -360
-	            });
+	            if (window.innerWidth < 816) {
+	              console.log("mobile");
+
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -400
+	              });
+	            } else {
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -360
+	              });
+	            }
 	          } else {
 	            console.log('B');
-	            scroller.scrollTo(category.name, {
-	              duration: 300,
-	              smooth: true,
-	              offset: -330
-	            });
+	            if (window.innerWidth < 816) {
+	              console.log("mobile");
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -330
+	              });
+	            } else {
+	              scroller.scrollTo(category.name, {
+	                duration: 300,
+	                smooth: true,
+	                offset: -330
+	              });
+	            }
 	          }
 	        }
 	      };
