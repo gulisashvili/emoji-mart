@@ -279,7 +279,7 @@ export default class Picker extends React.Component {
               scroller.scrollTo(category.name, {
                 duration: 300,
                 smooth: true,
-                offset: -420
+                offset: -430
               })
             } else {
                scroller.scrollTo(category.name, {
