@@ -23863,7 +23863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            scroller.scrollTo(category.name, {
 	              duration: 300,
 	              smooth: true,
-	              offset: -290
+	              offset: -360
 	            });
 	          } else {
 	            console.log('B');
