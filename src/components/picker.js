@@ -265,22 +265,11 @@ export default class Picker extends React.Component {
       if (component) {
         let { top } = component
 
-
-        if ( category.name == 'Recent') {
-          scroller.scrollTo(category.name, {
-            duration: 300,
-            smooth: true
-          })
-        } else {
-          scroller.scrollTo(category.name, {
-            duration: 300,
-            smooth: true,
-            offset: -340
-          })
-        }
-      
-
-    
+        scroller.scrollTo(category.name, {
+          duration: 300,
+          smooth: true,
+          offset: -350
+        })
 
       }
     }

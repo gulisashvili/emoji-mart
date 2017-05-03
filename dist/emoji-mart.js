@@ -23854,18 +23854,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var top = component.top;
 
 
-	          if (category.name == 'Recent') {
-	            scroller.scrollTo(category.name, {
-	              duration: 300,
-	              smooth: true
-	            });
-	          } else {
-	            scroller.scrollTo(category.name, {
-	              duration: 300,
-	              smooth: true,
-	              offset: -340
-	            });
-	          }
+	          scroller.scrollTo(category.name, {
+	            duration: 300,
+	            smooth: true,
+	            offset: -350
+	          });
 	        }
 	      };
 
