@@ -23859,12 +23859,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	          if (category.name == 'Recent') {
 	            console.log('A');
 	            scrolll.scrollTo(0);
+	          } else if (category.name == 'People') {
+	            scroller.scrollTo(category.name, {
+	              duration: 300,
+	              smooth: true,
+	              offset: -250
+	            });
 	          } else {
 	            console.log('B');
 	            scroller.scrollTo(category.name, {
 	              duration: 300,
 	              smooth: true,
-	              offset: -300
+	              offset: -330
 	            });
 	          }
 	        }
