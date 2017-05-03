@@ -15,6 +15,8 @@ var Element    = Scroll.Element;
 var Events     = Scroll.Events;
 var scrolll     = Scroll.animateScroll;
 var scrollSpy  = Scroll.scrollSpy;
+var scroller = Scroll.scroller;
+
 
 import { Anchors, Category, Emoji, Preview, Search } from '.'
 
@@ -46,6 +48,7 @@ export default class Picker extends React.Component {
     this.state = {
       skin: store.get('skin') || props.skin,
       firstRender: true,
+      categoryClicked: 'Recent'
     }
 
     this.categories = []
@@ -258,6 +261,8 @@ export default class Picker extends React.Component {
         { scroll, anchors } = this.refs,
         scrollToComponent = null
 
+    console.log('this refs ', this.refs)
+
     const people = 150
     const nature = 530
     const foods = 825
@@ -311,9 +316,18 @@ export default class Picker extends React.Component {
         
 
         // scroll.scrollTop = top
-        scrolll.scrollTo(top, {
-          duration: 300
-        });
+        // scrolll.scrollTo(top, {
+        //   duration: 300
+        // });
+
+        // scroller.scroller(component, {
+        //   duration: 300
+        // });
+
+        scroller.scrollTo(category.name, {
+          duration: 1500,
+          smooth: true
+        })
 
       }
     }

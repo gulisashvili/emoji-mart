@@ -1,6 +1,10 @@
 import React from 'react'
 import InlineSVG from 'svg-inline-react'
 
+var Scroll  = require('react-scroll');
+
+var Link       = Scroll.Link;
+
 import * as SVGs from '../svgs'
 
 export default class Anchors extends React.Component {
@@ -34,16 +38,17 @@ export default class Anchors extends React.Component {
         }
 
         return (
-          <span
-            key={name}
-            title={i18n.categories[name.toLowerCase()]}
-            onClick={() => onAnchorClick(category, i)}
-            className={`emoji-mart-anchor ${isSelected ? 'emoji-mart-anchor-selected' : ''}`}
-            style={{ color: isSelected ? color : null }}
-          >
-            <InlineSVG src={SVGs[name]} />
-            <span className='emoji-mart-anchor-bar' style={{ backgroundColor: color }}></span>
-          </span>
+            <span
+              key={name}
+              name={category.name }
+              title={i18n.categories[name.toLowerCase()]}
+              onClick={() => onAnchorClick(category, i)}
+              className={`emoji-mart-anchor ${isSelected ? 'emoji-mart-anchor-selected' : ''}`}
+              style={{ color: isSelected ? color : null }}
+            >
+              <InlineSVG src={SVGs[name]} />
+              <span className='emoji-mart-anchor-bar' style={{ backgroundColor: color }}></span>
+            </span>
         )
       })}
     </div>
