@@ -267,49 +267,45 @@ export default class Picker extends React.Component {
         console.log(window.innerWidth)
         console.log("YOOOOOOO")
 
-scroller.scrollTo(category.name, {
+
+
+        if ( category.name == 'Recent') {
+          console.log('A')
+          scrolll.scrollTo(0)
+        } else if (category.name == 'People') {
+            if (window.innerWidth < 816) {
+            console.log("mobile")
+              
+              scroller.scrollTo(category.name, {
                 duration: 300,
                 smooth: true,
-                offset: -350
+                offset: -400
               })
+            } else {
+               scroller.scrollTo(category.name, {
+                duration: 300,
+                smooth: true,
+                offset: -360
+              })
+            }
+        } else {
+          console.log('B')
+          if (window.innerWidth < 816) {
+            console.log("mobile")
+            scroller.scrollTo(category.name, {
+              duration: 300,
+              smooth: true,
+              offset: -360
+            })
+          } else {
+              scroller.scrollTo(category.name, {
+                duration: 300,
+                smooth: true,
+                offset: -330
+              })
+          }
 
-        // if ( category.name == 'Recent') {
-        //   console.log('A')
-        //   scrolll.scrollTo(0)
-        // } else if (category.name == 'People') {
-        //     if (window.innerWidth < 816) {
-        //     console.log("mobile")
-              
-        //       scroller.scrollTo(category.name, {
-        //         duration: 300,
-        //         smooth: true,
-        //         offset: -400
-        //       })
-        //     } else {
-        //        scroller.scrollTo(category.name, {
-        //         duration: 300,
-        //         smooth: true,
-        //         offset: -360
-        //       })
-        //     }
-        // } else {
-        //   console.log('B')
-        //   if (window.innerWidth < 816) {
-        //     console.log("mobile")
-        //     scroller.scrollTo(category.name, {
-        //       duration: 300,
-        //       smooth: true,
-        //       offset: -330
-        //     })
-        //   } else {
-        //       scroller.scrollTo(category.name, {
-        //         duration: 300,
-        //         smooth: true,
-        //         offset: -330
-        //       })
-        //   }
-
-        // }
+        }
 
 
       }
