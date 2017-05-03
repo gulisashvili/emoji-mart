@@ -23902,9 +23902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          console.log("TTTOOPP ", top);
 
 	          // scroll.scrollTop = top
-	          // scrolll.scrollTo(top, {
-	          //   duration: 300
-	          // });
+
 
 	          // scroller.scroller(component, {
 	          //   duration: 300
@@ -23912,8 +23910,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	          scroller.scrollTo(category.name, {
 	            duration: 1500,
-	            smooth: true
+	            smooth: true,
+	            offset: -340
 	          });
+
+	          // scrolll.scrollMore(-300, {
+	          //   duration: 300
+	          // });
 	        }
 	      };
 

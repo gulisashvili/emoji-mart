@@ -316,9 +316,7 @@ export default class Picker extends React.Component {
         
 
         // scroll.scrollTop = top
-        // scrolll.scrollTo(top, {
-        //   duration: 300
-        // });
+     
 
         // scroller.scroller(component, {
         //   duration: 300
@@ -326,8 +324,13 @@ export default class Picker extends React.Component {
 
         scroller.scrollTo(category.name, {
           duration: 1500,
-          smooth: true
+          smooth: true,
+          offset: -340
         })
+
+        // scrolll.scrollMore(-300, {
+        //   duration: 300
+        // });
 
       }
     }
